@@ -1,0 +1,24 @@
+{
+  "name": "blog-contents",
+  "version": "1.0.0",
+  "description": "blog-contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "new:article": "pnpx zenn new:article"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naoyukik/blog-contents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naoyukik/blog-contents/issues"
+  },
+  "homepage": "https://github.com/naoyukik/blog-contents#readme",
+  "dependencies": {
+    "zenn-cli": "^0.1.77"
+  }
+}
