@@ -4,7 +4,7 @@
   "description": "blog-contents",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pnpx zenn preview",
     "new:article": "pnpx zenn new:article"
   },
   "repository": {
