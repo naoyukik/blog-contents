@@ -23,6 +23,6 @@
     "textlint-rule-preset-icsmedia": "github:ics-creative/textlint-rule-preset-icsmedia",
     "textlint-rule-preset-ja-technical-writing": "^4.0.1",
     "textlint-rule-prh": "^5.3.0",
-    "zenn-cli": "^0.1.77"
+    "zenn-cli": "^0.1.79"
   }
 }
