@@ -22,6 +22,8 @@
     "textlint": "^11.9.0",
     "textlint-rule-preset-icsmedia": "github:ics-creative/textlint-rule-preset-icsmedia",
     "textlint-rule-preset-ja-technical-writing": "^4.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.8",
+    "textlint-rule-preset-smarthr": "^1.2.0",
     "textlint-rule-prh": "^5.3.0",
     "zenn-cli": "^0.1.79"
   }
