@@ -13,7 +13,6 @@ published: true
 ### mode設定
 ver2.x系でとりあえずステップデバッグを使うためには、下記の設定を行っていたと思います。いや、むしろこれがほぼすべてと言ってもよいくらい。
 
-
 ```ini
 xdebug.remote_enable=1
 xdebug.default_enable=0
