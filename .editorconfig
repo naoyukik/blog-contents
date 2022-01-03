@@ -9,5 +9,5 @@ insert_final_newline = true
 max_line_length = 79
 tab_width = 4
 
-[{*.json,.textlintrc}]
+[*{.json,.textlintrc,.yml}]
 indent_size = 2
