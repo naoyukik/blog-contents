@@ -3,6 +3,8 @@
     "ja-hiragana-keishikimeishi": true,
     "ja-hiragana-hojodoushi": true,
     "ja-hiragana-fukushi": true,
+    "ja-no-redundant-expression": true,
+    "ja-no-weak-phrase": true,
     "preset-jtf-style": {
       "no-exclamation-question-mark": false,
       "2.1.2.漢字": true,
