@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  zenn:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/app
+      - /app/node_modules
+    command: npx zenn preview
+volumes:
+  node_modules:
