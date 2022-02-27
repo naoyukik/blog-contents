@@ -1,13 +1,40 @@
-version: "3.3"
+version: "3.8"
 
 services:
   zenn:
-    build: .
+    build:
+      context: ../
+      dockerfile: ./docker-tools/Dockerfile
+      target: install_package
+      args:
+        - PUID=1000
+        - PGID=1000
+        - USER_NAME=linuxserver
+        - GROUP_NAME=linuxserver
     ports:
       - "8000:8000"
     volumes:
-      - ../:/app
-      - /app/node_modules
-    command: npx zenn preview
+      - zenn-data:/app
+    command: pnpm exec zenn preview
+#    tty: true
+  openssh-server:
+    build:
+      dockerfile: ./Dockerfile-openssh-server
+      target: openssh-server
+    container_name: openssh-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Tokyo
+      - PUBLIC_KEY=${OPENSSH_PUBLIC_KEY}
+      - SUDO_ACCESS=true #optional
+      - USER_NAME=linuxserver #optional
+    volumes:
+      - zenn-data:/app
+    depends_on:
+      - zenn
+    ports:
+      - "2200:2222"
+    restart: unless-stopped
 volumes:
-  node_modules:
+  zenn-data:

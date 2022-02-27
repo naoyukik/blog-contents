@@ -1,0 +1,2 @@
+FROM lscr.io/linuxserver/openssh-server as openssh-server
+RUN apk add rsync

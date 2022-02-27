@@ -1,19 +1,28 @@
 FROM bitnami/minideb as base_node
 SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
 
-RUN apt update
-RUN apt install -y wget curl make git vim
-RUN curl https://get.volta.sh | bash
 ENV VOLTA_HOME /root/.volta
 ENV PATH $VOLTA_HOME/bin:$PATH
-RUN volta install node
 
 WORKDIR /app
 
-FROM base_node as pnpm
+ARG USER_NAME
+ARG GROUP_NAME
+ARG PUID
+ARG PGID
+RUN groupadd -g ${PGID} ${GROUP_NAME}
+RUN useradd -m -s /bin/bash -u ${PUID} -g ${PGID} ${USER_NAME}
+
+RUN apt-get update \
+    && apt-get install -y wget curl make git \
+    && apt-get clean \
+    && curl https://get.volta.sh | bash \
+    && volta install node
+
+FROM base_node as install_pnpm
 RUN volta install pnpm
 
-FROM pnpm as install_package
-COPY package.json /app/package.json
-COPY package-lock.json /app/package-lock.json
+FROM install_pnpm as install_package
+ARG USER_NAME
+ADD --chown=${USER_NAME}:${USER_NAME} . /app
 RUN pnpm i --dir /app
