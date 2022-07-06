@@ -1,5 +1,5 @@
 ---
-title: "IntelliJ系でこれ使っとけ機能3選 Gitとか"
+title: "IntelliJ系で便利機能3選 Gitとか"
 emoji: "🦔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["IntelliJ","Git","GitHub"]
