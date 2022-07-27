@@ -4,4 +4,6 @@ topics: ["IntelliJ","PhpStorm"] # トピック（5つまで）
 published: true # falseだと下書き
 price: 0 # 有料の場合200〜5000
 chapters:
-    - web-development # チャプター2
+    - web-development # タイトルページ
+    - editor-based-rest-client
+    - troubleshooting
