@@ -78,7 +78,7 @@ Xdebugはデバッグを動作させるタイミングをある程度設定で�
 下記設定をxdebug.iniへ記載します。
 
 ```ini
-xdebug.start_with_request＝yes
+xdebug.start_with_request=yes
 ```
 
 | start_with_requestのvalue | 説明                                                                 |
@@ -96,7 +96,7 @@ triggerに関しては、trigger_valueという追加の設定があります。
 trigger_valueが空の場合、XDEBUG_TRIGGERの文字列に関係なくデバッグが開始します。
 
 ```ini
-xdebug.trigger_value＝""
+xdebug.trigger_value=""
 ```
 
 trigger_valueを設定した場合、PHPUniやHTTP Requestを使用したデバッグを行う際、XDEBUG_TRIGGER等の文字列を個別に設定する必要があります。
