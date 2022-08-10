@@ -6,4 +6,5 @@ price: 0 # 有料の場合200〜5000
 chapters:
     - web-development # タイトルページ
     - editor-based-rest-client
+    - xdebug
     - troubleshooting
