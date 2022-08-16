@@ -103,4 +103,17 @@ trigger_valueを設定した場合、PHPUniやHTTP Requestを使用したデバ�
 この場合でPhpStormからPHPUnitでのデバッグを行う場合、`Run/Debug Configurations`の各テストの`Command line | Environment valiables`に`XDEBUG_TRIGGER={values}`を設定すればデバッグが可能になります。
 ただ、trigger_valueはローカルでの開発時、どのような文字列であってもデバッグ可能にしていたほうが開発しやすいでしょう。
 
-ここまでの設定でブレークポイントが動作するかを確認してみましょう。
+## PhpStorm設定
+PhpStormのXdebugを使用する際の設定を紹介します。
+
+PhpStormでXdebugのステップデバッグを行う際必要なのは、実際のところXdebugが動作するサーバーの設定が主です。
+![CLI Interpreter](/images/Xdebug-Cli-Interpreters.png)
+
+CLI Interpreterで必要な設定は通常のDocker Compose設定の他、`Additional`の`Debugger extentions`の項目です。
+ここでは`xdebug.so`と記載します。
+
+開発中でも不要であればXdebugを有効にしておく必要はありません。
+使用したい場合、コマンドラインからPHPコマンドを実行する際にxdebug.soを読み込むことが可能です。
+そうすることで「PHPUnit等でデバッグを実行するときのみXdebugのブレークポイントを使用する」というようなことが可能になります。
+
+ここまでの設定でブレークポイントが動作するか、手元のソースコードで確認してみましょう。
