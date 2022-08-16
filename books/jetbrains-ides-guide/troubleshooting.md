@@ -20,3 +20,15 @@ IDEの動きが突然怪しくなったときは一度キャッシュ削除を�
 1. メニューの`File | Invalidate Caches..`を選択
 2. `Clear file system cache and Local History` `Clear VCS Log caches and indexes`あたりにチェックを入れる
 3. `Invalidate and Restart`ボタンをクリック
+
+# IDEが重い、遅い
+
+## メモリーの使用上限を変更する
+https://pleiades.io/help/phpstorm/increasing-memory-heap.html
+デフォルトのメモリー使用上限が低い可能性があります。
+だいたいに於いて、使用上限を2GB以上にすると動作が軽快になるようです。
+ご使用中のPCのメモリーとご相談ください。
+
+1. メニューの`Help | Change Memory Settings`を選択
+2. `Maximum Heep Size`の値を任意の数字に変更する（2GBの場合`2048`）
+3. `Save and Restart`でIDEを再起動する
