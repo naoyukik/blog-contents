@@ -10,7 +10,7 @@ specifiers:
   textlint-rule-ja-no-weak-phrase: ^2.0.0
   textlint-rule-preset-jtf-style: ^2.3.13
   textlint-rule-prh: ^5.3.0
-  zenn-cli: ^0.1.117
+  zenn-cli: ^0.1.125
 
 dependencies:
   npm-check-updates: 12.5.12
@@ -22,7 +22,7 @@ dependencies:
   textlint-rule-ja-no-weak-phrase: 2.0.0
   textlint-rule-preset-jtf-style: 2.3.13_odss4dzsfafse25ba27rjpniny
   textlint-rule-prh: 5.3.0_lnfvi5qkchyz6ykl3uzwwdbugi
-  zenn-cli: 0.1.117
+  zenn-cli: 0.1.125
 
 packages:
 
@@ -3266,6 +3266,7 @@ packages:
   /unified/8.4.2:
     resolution: {integrity: sha512-JCrmN13jI4+h9UAyKEoGcDZV+i1E7BLFuG7OsaDvTXI5P0qhHX+vZO/kOhz9jn8HGENDKbwSeB0nVOg4gVStGA==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-plain-obj: 2.1.0
@@ -3276,6 +3277,7 @@ packages:
   /unified/9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5
@@ -3496,8 +3498,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /zenn-cli/0.1.117:
-    resolution: {integrity: sha512-1IvPRwB+cTRl3R+5MgdFm6h++c3xzRTzrtxX5KRq2M7+AB2dF1hWBqwTS8n+u/edkTZxhXQJi94Uw8cbMdXGfg==}
+  /zenn-cli/0.1.125:
+    resolution: {integrity: sha512-ChV53yyQOltSIAbp+yjNSuloFbwNjlQtp0YfnLzIpqlnV1bdj0QgJtTSvVoC1LGcfa4cDGciR5d/pu/Si2WCbw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dev: false
