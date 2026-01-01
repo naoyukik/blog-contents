@@ -4,3 +4,11 @@ node_modules
 /assets/images/
 id_rsa*
 .env
+
+/.claude/
+/.gemini/
+/.aiassistant/
+/.junie/
+/CLAUDE.local.md
+/GEMINI.local.md
+/AGENTS.local.md
